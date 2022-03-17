@@ -1,9 +1,11 @@
 import cv2
 
+
 def img_read():
 	img = cv2.imread('Resources/chungus.png')
 	cv2.imshow("Output", img)
 	cv2.waitKey(0)
+
 
 def video_read():
 	cap = cv2.VideoCapture('Resources/sample.mp4')
@@ -15,6 +17,7 @@ def video_read():
 		if cv2.waitKey(1) & 0xFF == ord('q'):
 			break
 
+
 def webcam_read():
 	cap = cv2.VideoCapture(0)
 	cap.set(3, 640)
@@ -25,6 +28,7 @@ def webcam_read():
 		cv2.imshow('Video', img)
 		if cv2.waitKey(1) & 0xFF == ord('q'):
 			break
+
 
 if __name__ == '__main__':
 	webcam_read()
