@@ -29,12 +29,12 @@ def blur_img():
 def canny_img():
 	img = read_img()
 	img_canny = cv2.Canny(img, 100, 100)
-	# show_img(img_canny)
+	show_img(img_canny)
 	return img_canny
 
 
 def dilated_img():
-	kernel = np.ones((5,5), np.uint8)
+	kernel = np.ones((5, 5), np.uint8)
 	img = canny_img()
 	img_dilation = cv2.dilate(img, kernel, iterations=1)
 	show_img(img_dilation)
@@ -49,9 +49,26 @@ def eroded_img():
 	return img_erosion
 
 
+def resize_img():
+	img = read_img()
+	img_resized = cv2.resize(img, (500, 300))
+	show_img(img_resized)
+	return img_resized
+
+
+def crop_img():
+	img = read_img()
+	img_cropped = img[0:500][200:900]
+	show_img(img_cropped)
+	return img_cropped
+
+
 if __name__ == '__main__':
 	# grey_img()
 	# blur_img()
 	# canny_img()
-	eroded_img()
+	# eroded_img()
 	# dilated_img()
+	# resize_img()
+	# crop_img()
+	pass
