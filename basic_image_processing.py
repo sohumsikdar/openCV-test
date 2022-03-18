@@ -49,26 +49,10 @@ def eroded_img():
 	return img_erosion
 
 
-def resize_img():
-	img = read_img()
-	img_resized = cv2.resize(img, (500, 300))
-	show_img(img_resized)
-	return img_resized
-
-
-def crop_img():
-	img = read_img()
-	img_cropped = img[0:500][200:900]
-	show_img(img_cropped)
-	return img_cropped
-
-
 if __name__ == '__main__':
 	# grey_img()
 	# blur_img()
 	# canny_img()
 	# eroded_img()
 	# dilated_img()
-	# resize_img()
-	# crop_img()
 	pass
