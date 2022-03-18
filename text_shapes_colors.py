@@ -66,4 +66,3 @@ if __name__ == '__main__':
 	# draw_rect()
 	# draw_circle()
 	add_text()
-	pass
